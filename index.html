@@ -35,12 +35,13 @@
     }
     function decrease() {
       let number = Number(document.getElementById("number").innerText);
-      number = number - 1;
-      document.getElementById("number").innerText = number;
-      if (number < 0) {
+
+      if (number <= 0) {
         document.getElementById("error").style.display = "block";
         document.getElementById("number").style.color = "red";
       } else {
+        number = number - 1;
+        document.getElementById("number").innerText = number;
         document.getElementById("error").style.display = "none";
         document.getElementById("number").style.color = "green";
       }
